@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>来店前チャット相談｜clair veil（制作サンプル）</title>
+  <meta name="description" content="架空の美容室 clair veil の来店前チャット相談（選択式・制作サンプル）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/chat.js" defer></script>
+</head>
+<body data-page="chat">
+<main>
+
+  <div class="page-head">
+    <h1 class="heading"><span class="heading__en">Chat</span><span class="heading__ja">来店前チャット相談</span></h1>
+    <p class="breadcrumb"><a href="index.html">トップ</a> ／ 来店前チャット相談</p>
+  </div>
+
+  <section class="section chat-section">
+    <div class="wrap">
+      <p class="lead" style="margin-top:0">ボタンを選ぶだけで、髪のお悩みに合わせたおすすめメニューをご提案します。<br>文字の入力は必要ありません。</p>
+
+      <div class="chat" id="chat">
+        <div class="chat__head">
+          <img class="chat__avatar" id="chat-avatar" src="images/staff-1.jpg" alt="" width="44" height="44">
+          <div class="chat__who"><b id="chat-name">白石 澪</b><small>店長／トップスタイリスト</small></div>
+          <button class="chat__restart" type="button" id="chat-restart">最初から相談する</button>
+        </div>
+        <div class="chat__log" id="chat-log" aria-live="polite"></div>
+        <div class="chat__choices" id="chat-choices"></div>
+        <p class="chat__note">※ 制作サンプルのため、選んだ内容はどこにも送信・保存されません。返信はすべて事前に用意した文章です。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

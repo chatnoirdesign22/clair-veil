@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>メニュー・料金｜clair veil（制作サンプル）</title>
+  <meta name="description" content="架空の美容室 clair veil のメニュー・料金と料金シミュレーター（制作サンプル）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/simulator.js" defer></script>
+</head>
+<body data-page="menu" class="page-sim">
+<main>
+
+  <div class="page-head">
+    <h1 class="heading"><span class="heading__en">Menu &amp; Price</span><span class="heading__ja">メニュー・料金</span></h1>
+    <p class="breadcrumb"><a href="index.html">トップ</a> ／ メニュー・料金</p>
+  </div>
+
+  <!-- 料金シミュレーター -->
+  <section class="section" id="simulator" aria-labelledby="sim-title">
+    <div class="wrap">
+      <h2 class="heading" id="sim-title"><span class="heading__en">Simulator</span><span class="heading__ja">料金シミュレーター</span></h2>
+      <p class="lead">髪の長さとメニューを選ぶだけで、合計金額と所要時間がすぐに分かります。</p>
+
+      <p class="sim-from-chat" id="sim-from" hidden></p>
+
+      <div class="sim">
+        <div>
+          <!-- STEP 1 -->
+          <div class="sim-step" id="step1">
+            <div class="sim-step__head">
+              <span class="sim-step__num">STEP<b>1</b></span>
+              <h3 class="sim-step__title">髪の長さを選ぶ<span class="sim-step__hint">今の長さに近いものを1つ選んでください</span></h3>
+            </div>
+            <div class="choice-grid choice-grid--3" id="len-list" role="radiogroup" aria-label="髪の長さ"></div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="sim-step" id="step2">
+            <div class="sim-step__head">
+              <span class="sim-step__num">STEP<b>2</b></span>
+              <h3 class="sim-step__title">メニューを選ぶ<span class="sim-step__hint">いくつでも選べます（もう一度押すと解除）</span></h3>
+            </div>
+            <div class="choice-grid choice-grid--2" id="menu-list"></div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="sim-step" id="step3">
+            <div class="sim-step__head">
+              <span class="sim-step__num">STEP<b>3</b></span>
+              <h3 class="sim-step__title">結果を見る<span class="sim-step__hint">内訳と合計です</span></h3>
+            </div>
+            <div class="sim-result" id="result" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <!-- 合計（PC：右に固定表示） -->
+        <aside class="sim-summary sim-summary--side" aria-label="現在の合計">
+          <div class="sim-summary__label">合計（税込）</div>
+          <div class="sim-summary__total" data-sum="total">0<small>円</small></div>
+          <div class="sim-summary__time">所要時間 約 <b data-sum="time">0分</b></div>
+          <span class="sim-summary__save" data-sum="save" hidden></span>
+          <div class="sim-summary__len" data-sum="len"></div>
+          <a class="btn btn--wide" href="#step3" style="margin-top:20px" data-sum="go">内訳を見る</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金表 -->
+  <section class="section section--soft" id="price">
+    <div class="wrap">
+      <h2 class="heading reveal"><span class="heading__en">Price List</span><span class="heading__ja">料金表（税込）</span></h2>
+      <table class="price-table reveal" id="price-table">
+        <thead><tr><th scope="col">メニュー</th><td>ショート</td><td>ミディアム</td><td>ロング</td></tr></thead>
+        <tbody></tbody>
+      </table>
+      <ul class="price-note reveal">
+        <li>カット＋カラー（またはケアブリーチ）を同時にご利用で <b>−1,100円</b>（カット＋カラー割）</li>
+        <li>さらにトリートメントかヘッドスパを追加で <b>−550円</b>（ケアセット割）</li>
+        <li>所要時間は目安です。髪の状態により前後します。</li>
+        <li>※架空の店舗のため、すべて架空の料金です。</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- 合計（スマホ：画面下に固定表示） -->
+<div class="sim-mobilebar" aria-label="現在の合計">
+  <div class="sim-mobilebar__nums">
+    <div class="sim-mobilebar__total"><span data-sum="total">0<small>円</small></span><span class="sim-mobilebar__save" data-sum="save-s"></span></div>
+    <div class="sim-mobilebar__time">所要時間 約 <span data-sum="time">0分</span></div>
+  </div>
+  <a class="btn" href="#step3">内訳を見る</a>
+</div>
+</body>
+</html>

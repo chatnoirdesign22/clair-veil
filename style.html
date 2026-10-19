@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>スタイル｜clair veil（制作サンプル）</title>
+  <meta name="description" content="架空の美容室 clair veil のスタイルギャラリーとカラーシミュレーター（制作サンプル）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</head>
+<body data-page="style">
+<main>
+
+  <div class="page-head">
+    <h1 class="heading"><span class="heading__en">Style</span><span class="heading__ja">スタイル</span></h1>
+    <p class="breadcrumb"><a href="index.html">トップ</a> ／ スタイル</p>
+    <nav class="page-anchors" aria-label="ページ内リンク">
+      <a href="#gallery">スタイルギャラリー</a>
+      <a href="#color-sim">カラーシミュレーター</a>
+    </nav>
+  </div>
+
+  <!-- スタイルギャラリー -->
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <h2 class="heading"><span class="heading__en">Gallery</span><span class="heading__ja">スタイルギャラリー</span></h2>
+      <p class="lead">写真を押すと、スタイルのポイントと担当スタッフが見られます。</p>
+
+      <div class="filters">
+        <div class="filter">
+          <span class="filter__label" id="f-len">髪の長さ</span>
+          <div class="filter__btns" role="group" aria-labelledby="f-len" data-filter="len"></div>
+        </div>
+        <div class="filter">
+          <span class="filter__label" id="f-tone">カラー</span>
+          <div class="filter__btns" role="group" aria-labelledby="f-tone" data-filter="tone"></div>
+        </div>
+        <p class="filter__count" aria-live="polite"><b id="g-count">0</b> スタイル</p>
+      </div>
+
+      <ul class="gallery" id="gallery-list"></ul>
+      <p class="gallery__empty" id="gallery-empty" hidden>この条件のスタイルはまだありません。<br><button class="link-btn" type="button" data-clear>条件をリセット</button></p>
+      <p class="photo-note">※ 写真はイメージです（素材写真を使用しています）。</p>
+    </div>
+  </section>
+
+  <!-- カラーシミュレーター -->
+  <section class="section section--soft" id="color-sim">
+    <div class="wrap">
+      <h2 class="heading"><span class="heading__en">Color Simulator</span><span class="heading__ja">カラーシミュレーター</span></h2>
+      <p class="lead">色を選ぶと、イラストの髪色が変わります。気になる色の「ブリーチが必要か」「色持ち」もチェックできます。</p>
+
+      <div class="csim">
+        <div class="csim__figure">
+          <svg class="hair-svg" viewBox="0 0 300 360" role="img" aria-labelledby="csim-svg-title" id="hair-svg">
+            <title id="csim-svg-title">選んだ髪色のイラスト</title>
+            <defs>
+              <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+                <stop offset=".35" stop-color="#fff" stop-opacity=".08"/>
+                <stop offset=".6" stop-color="#fff" stop-opacity="0"/>
+                <stop offset="1" stop-color="#000" stop-opacity=".12"/>
+              </linearGradient>
+              <radialGradient id="bg" cx=".5" cy=".4" r=".7">
+                <stop offset="0" stop-color="#fff"/>
+                <stop offset="1" stop-color="#f1ebe5"/>
+              </radialGradient>
+            </defs>
+            <rect width="300" height="360" fill="url(#bg)"/>
+            <!-- 後ろ髪 -->
+            <path class="hair" d="M150 38C82 38 54 92 57 160c3 70-8 128-22 172h230c-14-44-25-102-22-172C246 92 218 38 150 38z"/>
+            <path d="M150 38C82 38 54 92 57 160c3 70-8 128-22 172h230c-14-44-25-102-22-172C246 92 218 38 150 38z" fill="url(#shine)"/>
+            <!-- 体・首・顔 -->
+            <rect x="132" y="200" width="36" height="76" rx="14" fill="#ecd4c1"/>
+            <path d="M36 360c6-52 52-90 114-90s108 38 114 90z" fill="#e8ddd2"/>
+            <path d="M126 272c8 14 40 14 48 0" fill="none" stroke="#d9cbbd" stroke-width="2"/>
+            <ellipse cx="150" cy="158" rx="52" ry="64" fill="#f3e0d0"/>
+            <ellipse cx="124" cy="182" rx="10" ry="6" fill="#efc3b3" opacity=".5"/>
+            <ellipse cx="176" cy="182" rx="10" ry="6" fill="#efc3b3" opacity=".5"/>
+            <!-- 前髪・サイド -->
+            <path class="hair" d="M150 50c-58 0-72 54-64 104 6-22 16-40 34-52 24 10 58 6 82-6 8 22 14 40 16 58 9-52-6-104-68-104z"/>
+            <path class="hair" d="M90 132c-12 64-8 128-26 196h34c4-62 0-122 6-180z"/>
+            <path class="hair" d="M210 132c12 64 8 128 26 196h-34c-4-62 0-122-6-180z"/>
+            <path d="M150 50c-58 0-72 54-64 104 6-22 16-40 34-52 24 10 58 6 82-6 8 22 14 40 16 58 9-52-6-104-68-104z" fill="url(#shine)"/>
+            <!-- 毛流れ -->
+            <g fill="none" stroke="#000" stroke-opacity=".1" stroke-width="1.4" stroke-linecap="round">
+              <path d="M120 70c-20 20-28 50-30 80"/><path d="M175 66c18 14 28 36 32 62"/>
+              <path d="M74 190c-2 40-8 80-18 120"/><path d="M226 190c2 40 8 80 18 120"/>
+              <path d="M98 170c-2 50-4 100-14 150"/><path d="M202 170c2 50 4 100 14 150"/>
+            </g>
+            <!-- 天使の輪（ツヤ） -->
+            <path d="M104 86c26-16 66-16 92 0" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <p class="csim__caption">※ イラストのため、実際の仕上がりとは異なります。</p>
+        </div>
+
+        <div class="csim__panel">
+          <div class="swatches" role="radiogroup" aria-label="カラーを選ぶ" id="swatches"></div>
+          <div class="csim__info" id="csim-info" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 拡大表示 -->
+<dialog class="lightbox" id="lightbox" aria-labelledby="lb-name">
+  <div class="lightbox__inner">
+    <button class="lightbox__close" type="button" data-lb="close" aria-label="閉じる">×</button>
+    <div class="lightbox__img"><img class="photo" id="lb-img" alt=""></div>
+    <div class="lightbox__body">
+      <p class="lightbox__tags" id="lb-tags"></p>
+      <h2 class="lightbox__name" id="lb-name"></h2>
+      <p class="lightbox__point" id="lb-point"></p>
+      <div class="lightbox__staff" id="lb-staff"></div>
+      <p class="lightbox__menus" id="lb-menus"></p>
+      <a class="btn btn--wide" id="lb-sim" href="menu.html#simulator">このスタイルの料金を見る</a>
+      <div class="lightbox__nav">
+        <button class="link-btn" type="button" data-lb="prev">← 前のスタイル</button>
+        <button class="link-btn" type="button" data-lb="next">次のスタイル →</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+</body>
+</html>

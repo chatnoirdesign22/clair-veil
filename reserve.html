@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>アクセス・予約｜clair veil（制作サンプル）</title>
+  <meta name="description" content="架空の美容室 clair veil のアクセスと予約フォームの見本（制作サンプル）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/reserve.js" defer></script>
+</head>
+<body data-page="reserve">
+<main>
+
+  <div class="page-head">
+    <h1 class="heading"><span class="heading__en">Access &amp; Reservation</span><span class="heading__ja">アクセス・予約</span></h1>
+    <p class="breadcrumb"><a href="index.html">トップ</a> ／ アクセス・予約</p>
+    <nav class="page-anchors" aria-label="ページ内リンク">
+      <a href="#access">アクセス</a>
+      <a href="#form">予約フォーム</a>
+    </nav>
+  </div>
+
+  <!-- アクセス -->
+  <section class="section" id="access">
+    <div class="wrap">
+      <h2 class="heading reveal"><span class="heading__en">Access</span><span class="heading__ja">アクセス</span></h2>
+      <div class="access">
+        <div class="access__map reveal">
+          <!-- 実在の地図ではなく、架空の道順を表したイラストです -->
+          <svg viewBox="0 0 480 360" role="img" aria-labelledby="map-title">
+            <title id="map-title">阪急 大阪梅田駅 茶屋町口からサロンまでの道順イメージ</title>
+            <rect width="480" height="360" fill="#f7f4f1"/>
+            <g fill="#ece6e0">
+              <rect x="20" y="20" width="140" height="90" rx="8"/><rect x="190" y="20" width="120" height="90" rx="8"/><rect x="340" y="20" width="120" height="90" rx="8"/>
+              <rect x="20" y="150" width="140" height="90" rx="8"/><rect x="340" y="150" width="120" height="90" rx="8"/>
+              <rect x="20" y="280" width="140" height="60" rx="8"/><rect x="190" y="280" width="120" height="60" rx="8"/><rect x="340" y="280" width="120" height="60" rx="8"/>
+            </g>
+            <rect x="190" y="150" width="120" height="90" rx="8" fill="#e3dbd2"/>
+            <text x="250" y="200" text-anchor="middle" font-size="12" fill="#8a7563">商業ビル</text>
+            <rect x="20" y="150" width="140" height="90" rx="8" fill="#ddd4ca"/>
+            <text x="90" y="192" text-anchor="middle" font-size="13" fill="#5f5650">阪急</text>
+            <text x="90" y="210" text-anchor="middle" font-size="11" fill="#5f5650">大阪梅田駅</text>
+            <!-- 道順 -->
+            <path d="M160 222 H 175 V 130 H 325 V 75" fill="none" stroke="#a8927f" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+            <circle cx="160" cy="222" r="7" fill="#fff" stroke="#a8927f" stroke-width="3"/>
+            <text x="150" y="258" text-anchor="middle" font-size="11" fill="#8a7563">茶屋町口</text>
+            <g transform="translate(325 62)">
+              <path d="M0 0c-10 0-17 7-17 16 0 13 17 28 17 28s17-15 17-28C17 7 10 0 0 0z" fill="#b5776b" transform="translate(0 -36)"/>
+              <circle cx="0" cy="-20" r="6" fill="#fff"/>
+            </g>
+            <text x="388" y="58" text-anchor="middle" font-size="12" fill="#3b3633">clair veil</text>
+            <text x="388" y="74" text-anchor="middle" font-size="10" fill="#7d7570">ヴェールビル 3F</text>
+            <text x="240" y="122" text-anchor="middle" font-size="10" fill="#7d7570">茶屋町通り（イメージ）</text>
+          </svg>
+          <p class="access__note">※ 架空の店舗のため、地図はイメージです。</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <dl class="access__dl">
+            <dt>店名</dt><dd>clair veil（クレール ヴェール）</dd>
+            <dt>住所</dt><dd>大阪市北区茶屋町99-9 ヴェールビル 3F<br><small class="muted">※ 実在しない架空の住所です</small></dd>
+            <dt>アクセス</dt><dd>阪急 大阪梅田駅 茶屋町口から徒歩6分</dd>
+            <dt>営業時間</dt><dd>10:00〜20:00（最終受付 18:30）</dd>
+            <dt>定休日</dt><dd>火曜日</dd>
+            <dt>電話</dt><dd>000-0000-0000（ダミー番号）</dd>
+            <dt>席数</dt><dd>4席</dd>
+          </dl>
+          <h3 class="route-title">駅からの道順</h3>
+          <ol class="route">
+            <li><span>1</span>阪急 大阪梅田駅の「茶屋町口」改札を出ます。</li>
+            <li><span>2</span>右手の茶屋町通りを、北へまっすぐ約4分進みます。</li>
+            <li><span>3</span>白い外壁の「ヴェールビル」の3階です。エレベーターをご利用ください。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 予約フォーム -->
+  <section class="section section--soft" id="form">
+    <div class="wrap">
+      <h2 class="heading reveal"><span class="heading__en">Reservation</span><span class="heading__ja">予約フォーム（見本）</span></h2>
+      <p class="sample-alert reveal">これは制作サンプルの予約フォームです。<b>入力した内容はどこにも送信・保存されません。</b></p>
+
+      <form class="rform" id="rform" novalidate>
+        <fieldset class="rform__group">
+          <legend>ご希望の日時</legend>
+          <div class="rform__row2">
+            <label class="field">
+              <span class="field__label">日付<em>必須</em></span>
+              <input type="date" name="date" id="f-date" required>
+              <span class="field__error" data-error="date"></span>
+            </label>
+            <label class="field">
+              <span class="field__label">時間<em>必須</em></span>
+              <select name="time" id="f-time" required><option value="">選択してください</option></select>
+              <span class="field__error" data-error="time"></span>
+            </label>
+          </div>
+          <p class="field__hint">火曜日は定休日です。最終受付は 18:30 です。</p>
+        </fieldset>
+
+        <fieldset class="rform__group">
+          <legend>髪の長さ<em>必須</em></legend>
+          <div class="choice-grid choice-grid--3" id="f-len"></div>
+          <span class="field__error" data-error="len"></span>
+        </fieldset>
+
+        <fieldset class="rform__group">
+          <legend>メニュー<em>必須</em><small>（複数選べます）</small></legend>
+          <div class="rform__menus" id="f-menus"></div>
+          <span class="field__error" data-error="menu"></span>
+          <p class="rform__sum" id="f-sum" aria-live="polite"></p>
+          <p class="field__hint">メニューに迷ったら <a href="menu.html#simulator">料金シミュレーター</a> や <a href="chat.html">チャット相談</a> もご利用ください。</p>
+        </fieldset>
+
+        <fieldset class="rform__group">
+          <legend>スタイリスト</legend>
+          <label class="field">
+            <span class="field__label">ご指名</span>
+            <select name="staff" id="f-staff"><option value="">指名なし</option></select>
+          </label>
+        </fieldset>
+
+        <fieldset class="rform__group">
+          <legend>お客さま情報</legend>
+          <label class="field">
+            <span class="field__label">お名前<em>必須</em></span>
+            <input type="text" name="name" id="f-name" required placeholder="例）山田 花子" autocomplete="off">
+            <span class="field__error" data-error="name"></span>
+          </label>
+          <div class="field">
+            <span class="field__label">ご来店は</span>
+            <div class="radio-row">
+              <label><input type="radio" name="visit" value="初めて" checked> 初めて</label>
+              <label><input type="radio" name="visit" value="2回目以降"> 2回目以降</label>
+            </div>
+          </div>
+          <label class="field">
+            <span class="field__label">ご要望（任意）</span>
+            <textarea name="note" id="f-note" rows="4" placeholder="例）なりたい髪色の写真を持っていきます"></textarea>
+          </label>
+        </fieldset>
+
+        <button class="btn btn--wide rform__submit" type="submit">この内容で予約する（見本）</button>
+        <p class="field__hint" style="text-align:center">※ ボタンを押しても送信はされません。</p>
+      </form>
+
+      <div class="rdone" id="rdone" hidden tabindex="-1">
+        <div class="rdone__icon" aria-hidden="true">✓</div>
+        <h3 class="rdone__title">予約を受け付けました</h3>
+        <p class="rdone__sample">※ 制作サンプルのため、実際には送信されません。</p>
+        <dl class="rdone__list" id="rdone-list"></dl>
+        <div class="rdone__btns">
+          <button class="btn btn--ghost" type="button" id="rdone-back">入力画面に戻る</button>
+          <a class="btn" href="index.html">トップへ戻る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
