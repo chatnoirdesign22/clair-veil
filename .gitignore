@@ -1,2 +1,8 @@
 # 公開しないもの（確認用サーバーの設定など）
 .claude/
+
+# 作業用メモ（PCのフォルダの場所が書かれているため公開しない）
+claude-code-prompt.md
+RECOVERY.md
+docs/PLAN.md
+docs/PROJECT_STATUS.md
