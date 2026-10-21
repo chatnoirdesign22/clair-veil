@@ -1,0 +1,9 @@
+clair veil（架空美容室サイト）の公開URL
+
+■ 公開中のサイト（見る人に渡すURL）
+https://penguin08xx.github.io/clair-veil/
+
+■ GitHub のリポジトリ（ファイルの置き場所）
+https://github.com/penguin08xx/clair-veil
+
+公開日: 2026-10-19
